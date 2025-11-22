@@ -77,90 +77,90 @@ class TTT{
         //These tests make the AI play defensively.
 
         //This test tells the AI when to move to 0,0 to block X.
-        if (((board[1][0] == 'X') && (board[2][0] == 'X')) || ((board[0][1] == 'X') && (board[0][2]) == 'X') || ((board[1][1] == 'X') && (board[2][2] == 'X'))) {
+        if ((((board[1][0] == 'X') && (board[2][0] == 'X')) || ((board[0][1] == 'X') && (board[0][2]) == 'X') || ((board[1][1] == 'X') && (board[2][2] == 'X'))) && (isLegal(0, 0))) {
             move(0,0);
         }
 
         // Moves defensively to 0,2.
-        else if (((board[0][0] == 'X') && (board[0][1] == 'X')) || ((board[1][2] == 'X') && (board[2][2]) == 'X') || ((board[1][1] == 'X') && (board[2][0] == 'X'))) {
+        else if ((((board[0][0] == 'X') && (board[0][1] == 'X')) || ((board[1][2] == 'X') && (board[2][2]) == 'X') || ((board[1][1] == 'X') && (board[2][0] == 'X')))&& (isLegal(0, 2))) {
             move(0,2);
         }
 
         //Moves defensively to 2,0.
-        else if (((board[0][0] == 'X') && (board[1][0] == 'X')) || ((board[2][1] == 'X') && (board[2][2]) == 'X') || ((board[1][1] == 'X') && (board[0][2] == 'X'))) {
+        else if ((((board[0][0] == 'X') && (board[1][0] == 'X')) || ((board[2][1] == 'X') && (board[2][2]) == 'X') || ((board[1][1] == 'X') && (board[0][2] == 'X'))) && (isLegal(2, 0))) {
             move(2,0);
         }
 
         //So on for the rest of the places in the board.
-        else if (((board[0][0] == 'X') && (board[1][1] == 'X')) || ((board[1][2] == 'X') && (board[0][2]) == 'X') || ((board[2][1] == 'X') && (board[2][0] == 'X'))) {
+        else if ((((board[0][0] == 'X') && (board[1][1] == 'X')) || ((board[1][2] == 'X') && (board[0][2]) == 'X') || ((board[2][1] == 'X') && (board[2][0] == 'X'))) && (isLegal(2, 2))) {
             move(2,2);
         }
 
-        else if (((board[0][0] == 'X') && (board[2][2] == 'X')) || ((board[1][2] == 'X') && (board[1][0]) == 'X') || ((board[0][1] == 'X') && (board[2][1] == 'X')) || ((board[0][2] == 'X') && (board[2][0] == 'X'))) {
+        else if ((((board[0][0] == 'X') && (board[2][2] == 'X')) || ((board[1][2] == 'X') && (board[1][0]) == 'X') || ((board[0][1] == 'X') && (board[2][1] == 'X')) || ((board[0][2] == 'X') && (board[2][0] == 'X'))) && (isLegal(1, 1))) {
             move(1,1);
         }
 
-        else if (((board[0][0] == 'X') && (board[2][0] == 'X')) || ((board[1][1] == 'X') && (board[1][2]) == 'X')) {
+        else if ((((board[0][0] == 'X') && (board[2][0] == 'X')) || ((board[1][1] == 'X') && (board[1][2]) == 'X')) && (isLegal(1, 0))) {
             move(1,0);
         }
 
-        else if (((board[0][0] == 'X') && (board[0][2] == 'X')) || ((board[1][1] == 'X') && (board[2][1]) == 'X')) {
+        else if ((((board[0][0] == 'X') && (board[0][2] == 'X')) || ((board[1][1] == 'X') && (board[2][1]) == 'X')) && (isLegal(0, 1))) {
             move(0,1);
         }
 
-        else if (((board[0][2] == 'X') && (board[2][2] == 'X')) || ((board[1][1] == 'X') && (board[1][0]) == 'X')) {
+        else if ((((board[0][2] == 'X') && (board[2][2] == 'X')) || ((board[1][1] == 'X') && (board[1][0]) == 'X')) && (isLegal(1, 2))) {
             move(1,2);
         }
 
-        else if (((board[2][0] == 'X') && (board[2][2] == 'X')) || ((board[1][1] == 'X') && (board[0][1]) == 'X')) {
+        else if ((((board[2][0] == 'X') && (board[2][2] == 'X')) || ((board[1][1] == 'X') && (board[0][1]) == 'X')) && (isLegal(2, 1))) {
             move(2,1);
         }
 
-        //These tests make the AI play ofensively.
+        //These tests make the AI play offensively.
 
-        //These statements go through each place in the board and tell the AI when to move there ofensively.
-        if (((board[1][0] == 'O') && (board[2][0] == 'O')) || ((board[0][1] == 'O') && (board[0][2]) == 'O') || ((board[1][1] == 'O') && (board[2][2] == 'O'))) {
+        //These statements go through each place in the board and tell the AI when to move there offensively.
+        else if ((((board[1][0] == 'O') && (board[2][0] == 'O')) || ((board[0][1] == 'O') && (board[0][2]) == 'O') || ((board[1][1] == 'O') && (board[2][2] == 'O'))) && (isLegal(0, 0))) {
             move(0,0);
         }
 
-        else if (((board[0][0] == 'O') && (board[0][1] == 'O')) || ((board[1][2] == 'O') && (board[2][2]) == 'O') || ((board[1][1] == 'O') && (board[2][0] == 'O'))) {
+        else if ((((board[0][0] == 'O') && (board[0][1] == 'O')) || ((board[1][2] == 'O') && (board[2][2]) == 'O') || ((board[1][1] == 'O') && (board[2][0] == 'O'))) && (isLegal(0, 2))) {
             move(0,2);
         }
 
-        else if (((board[0][0] == 'O') && (board[1][0] == 'O')) || ((board[2][1] == 'O') && (board[2][2]) == 'O') || ((board[1][1] == 'O') && (board[0][2] == 'O'))) {
+        else if ((((board[0][0] == 'O') && (board[1][0] == 'O')) || ((board[2][1] == 'O') && (board[2][2]) == 'O') || ((board[1][1] == 'O') && (board[0][2] == 'O'))) && (isLegal(2, 0))) {
             move(2,0);
         }
 
-        else if (((board[0][0] == 'O') && (board[1][1] == 'O')) || ((board[1][2] == 'O') && (board[0][2]) == 'O') || ((board[2][1] == 'O') && (board[2][0] == 'O'))) {
+        else if ((((board[0][0] == 'O') && (board[1][1] == 'O')) || ((board[1][2] == 'O') && (board[0][2]) == 'O') || ((board[2][1] == 'O') && (board[2][0] == 'O'))) && (isLegal(2, 2))) {
             move(2,2);
         }
 
-        else if (((board[0][0] == 'O') && (board[2][2] == 'O')) || ((board[1][2] == 'O') && (board[1][0]) == 'O') || ((board[0][1] == 'O') && (board[2][1] == 'O')) || ((board[0][2] == 'O') && (board[2][0] == 'O'))) {
+        else if ((((board[0][0] == 'O') && (board[2][2] == 'O')) || ((board[1][2] == 'O') && (board[1][0]) == 'O') || ((board[0][1] == 'O') && (board[2][1] == 'O')) || ((board[0][2] == 'O') && (board[2][0] == 'O'))) && (isLegal(1, 1))) {
             move(1,1);
         }
 
-        else if (((board[0][0] == 'O') && (board[2][0] == 'O')) || ((board[1][1] == 'O') && (board[1][2]) == 'O')) {
+        else if ((((board[0][0] == 'O') && (board[2][0] == 'O')) || ((board[1][1] == 'O') && (board[1][2]) == 'O')) && (isLegal(1, 0))) {
             move(1,0);
         }
 
-        else if (((board[0][0] == 'O') && (board[0][2] == 'O')) || ((board[1][1] == 'O') && (board[2][1]) == 'O')) {
+        else if ((((board[0][0] == 'O') && (board[0][2] == 'O')) || ((board[1][1] == 'O') && (board[2][1]) == 'O')) && (isLegal(0, 1))) {
             move(0,1);
         }
 
-        else if (((board[0][2] == 'O') && (board[2][2] == 'O')) || ((board[1][1] == 'O') && (board[1][0]) == 'O')) {
+        else if ((((board[0][2] == 'O') && (board[2][2] == 'O')) || ((board[1][1] == 'O') && (board[1][0]) == 'O')) && (isLegal(1, 2))) {
             move(1,2);
         }
 
-        else if (((board[2][0] == 'O') && (board[2][2] == 'O')) || ((board[1][1] == 'O') && (board[0][1]) == 'O')) {
+        else if ((((board[2][0] == 'O') && (board[2][2] == 'O')) || ((board[1][1] == 'O') && (board[0][1]) == 'O')) && (isLegal(2, 1))) {
             move(2,1);
         }
 
-        //This statment tells the AI to move to the center if it can.
-        else if(isLegal(1, 1) == true){
+        //This statement tells the AI to move to the center if it can.
+        else if((isLegal(1, 1) == true)){
             move(1, 1);
         }
 
-        //This statement makes the AI move randomely as a last result.
+        //This statement makes the AI move randomly as a last result.
         else{
             //random
             boolean test = false;  //have I found a place to go
